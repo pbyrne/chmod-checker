@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chmodchecker</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <title>chmod checker</title>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<%= render "shared/flash" %>
 <%= yield %>
 
 </body>
