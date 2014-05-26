@@ -1,5 +1,21 @@
 -# FIXME make this dynamic
-%p= params[:statement]
-%p{"data-mode-role" => "user"} read and write
-%p{"data-mode-role" => "group"} read
-%p{"data-mode-role" => "other"} read
+%p
+  The mode
+  %code= chmod.mode
+  will change permissions like so:
+
+%table
+  %thead
+    %tr
+      %th Who
+      %th What
+  %tbody
+    %tr
+      %th Owner
+      %th{"data-mode-role" => "user"}= chmod.user_description
+    %tr
+      %th Group
+      %th{"data-mode-role" => "group"}= chmod.group_description
+    %tr
+      %th Everyone else
+      %th{"data-mode-role" => "other"}= chmod.other_description
